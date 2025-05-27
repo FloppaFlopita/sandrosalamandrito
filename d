@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="507.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysventas.control.ProductController">
+<AnchorPane fx:id="miContenedor" prefHeight="507.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysventas.control.ProductController">
    <children>
       <VBox AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
@@ -12,7 +12,7 @@
                   <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="109.0" text="Gestionar Producto" />
                   <Label layoutX="329.0" layoutY="18.0" prefHeight="18.0" prefWidth="102.0" text="Filtrar Registro" />
                   <Button layoutX="538.0" layoutY="36.0" mnemonicParsing="false" styleClass="btn, btn-lg, btn-success" text="Buscar" />
-                  <TextField layoutX="347.0" layoutY="36.0" prefHeight="26.0" prefWidth="182.0" />
+                  <TextField fx:id="txtFiltroDato" layoutX="347.0" layoutY="36.0" prefHeight="26.0" prefWidth="182.0" />
                </children></AnchorPane>
             <HBox>
                <children>
@@ -53,36 +53,37 @@
                               <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="112.0" styleClass="btn, btn-lg, btn-primary" text="Guardar" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                               <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" styleClass="btn, btn-lg, btn-danger" text="Cancelar" GridPane.columnIndex="2" GridPane.rowIndex="9" />
                               <TextField prefHeight="26.0" prefWidth="229.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField prefHeight="25.0" prefWidth="66.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                              <TextField GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <TextField GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                              <SplitMenuButton mnemonicParsing="false" prefHeight="26.0" prefWidth="323.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="6">
+                              <TextField fx:id="txtPUnit" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="txtPUnitOld" prefHeight="25.0" prefWidth="66.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <TextField fx:id="txtUtilidad" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+                              <TextField fx:id="txtStock" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="txtStockOld" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <SplitMenuButton fx:id="cbxMarca" mnemonicParsing="false" prefHeight="26.0" prefWidth="323.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="6">
                                 <items>
                                   <MenuItem mnemonicParsing="false" text="Action 1" />
                                   <MenuItem mnemonicParsing="false" text="Action 2" />
                                 </items>
                               </SplitMenuButton>
-                              <SplitMenuButton layoutX="131.0" layoutY="195.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="327.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7">
+                              <SplitMenuButton fx:id="cbxCategoria" layoutX="131.0" layoutY="195.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="327.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7">
                                  <items>
                                     <MenuItem mnemonicParsing="false" text="Action 1" />
                                     <MenuItem mnemonicParsing="false" text="Action 2" />
                                  </items>
                               </SplitMenuButton>
-                              <SplitMenuButton layoutX="131.0" layoutY="225.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="8">
+                              <SplitMenuButton fx:id="cbxUnidMedida" layoutX="131.0" layoutY="225.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="8">
                                  <items>
                                     <MenuItem mnemonicParsing="false" text="Action 1" />
                                     <MenuItem mnemonicParsing="false" text="Action 2" />
                                  </items>
                               </SplitMenuButton>
+                              <Label fx:id="lbnMsg" text="Label" GridPane.rowIndex="10" />
                            </children>
                         </GridPane>
                      </children>
                   </AnchorPane>
                   <AnchorPane>
                      <children>
-                        <TableView layoutX="14.0" layoutY="5.0" prefHeight="400.0" prefWidth="258.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="5.0" />
+                        <TableView fx:id="tableView" layoutX="14.0" layoutY="5.0" prefHeight="400.0" prefWidth="258.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="5.0" />
                      </children>
                   </AnchorPane>
                </children>
