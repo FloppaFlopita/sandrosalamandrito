@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="miContenedor" prefHeight="507.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysventas.control.ProductController">
+<AnchorPane fx:id="miContenedor" prefHeight="507.0" prefWidth="1125.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysventas.control.ProductController">
    <children>
       <VBox AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
@@ -50,32 +50,20 @@
                               <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Marca:" GridPane.rowIndex="6" />
                               <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Categoria:" GridPane.rowIndex="7" />
                               <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Unidad Medida:" GridPane.rowIndex="8" />
-                              <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="112.0" styleClass="btn, btn-lg, btn-primary" text="Guardar" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <Button mnemonicParsing="false" onAction="#validarFormulario" prefHeight="27.0" prefWidth="112.0" styleClass="btn, btn-lg, btn-primary" text="Guardar" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                               <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" styleClass="btn, btn-lg, btn-danger" text="Cancelar" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-                              <TextField prefHeight="26.0" prefWidth="229.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtNombreProducto" prefHeight="26.0" prefWidth="229.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
                               <TextField fx:id="txtPUnit" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <TextField fx:id="txtPUnitOld" prefHeight="25.0" prefWidth="66.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                               <TextField fx:id="txtUtilidad" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4" />
                               <TextField fx:id="txtStock" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                               <TextField fx:id="txtStockOld" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                              <SplitMenuButton fx:id="cbxMarca" mnemonicParsing="false" prefHeight="26.0" prefWidth="323.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="6">
-                                <items>
-                                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                                  <MenuItem mnemonicParsing="false" text="Action 2" />
-                                </items>
-                              </SplitMenuButton>
-                              <SplitMenuButton fx:id="cbxCategoria" layoutX="131.0" layoutY="195.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="327.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7">
-                                 <items>
-                                    <MenuItem mnemonicParsing="false" text="Action 1" />
-                                    <MenuItem mnemonicParsing="false" text="Action 2" />
-                                 </items>
-                              </SplitMenuButton>
-                              <SplitMenuButton fx:id="cbxUnidMedida" layoutX="131.0" layoutY="225.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="8">
-                                 <items>
-                                    <MenuItem mnemonicParsing="false" text="Action 1" />
-                                    <MenuItem mnemonicParsing="false" text="Action 2" />
-                                 </items>
-                              </SplitMenuButton>
+                              <ComboBox fx:id="cbxMarca" prefHeight="26.0" prefWidth="323.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="6">
+                              </ComboBox>
+                              <ComboBox fx:id="cbxCategoria" layoutX="131.0" layoutY="195.0" prefHeight="26.0" prefWidth="327.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7">
+                              </ComboBox>
+                              <ComboBox fx:id="cbxUnidMedida" layoutX="131.0" layoutY="225.0" prefHeight="26.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="8">
+                              </ComboBox>
                               <Label fx:id="lbnMsg" text="Label" GridPane.rowIndex="10" />
                            </children>
                         </GridPane>
@@ -83,7 +71,7 @@
                   </AnchorPane>
                   <AnchorPane>
                      <children>
-                        <TableView fx:id="tableView" layoutX="14.0" layoutY="5.0" prefHeight="400.0" prefWidth="258.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="5.0" />
+                        <TableView fx:id="tableView" layoutX="-65.0" layoutY="5.0" prefHeight="400.0" prefWidth="666.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="-65.0" AnchorPane.rightAnchor="-343.0" AnchorPane.topAnchor="5.0" />
                      </children>
                   </AnchorPane>
                </children>
@@ -92,5 +80,3 @@
       </VBox>
    </children>
 </AnchorPane>
-
-                           
